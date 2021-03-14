@@ -18,6 +18,8 @@ export interface DataNode {
   /** Set style of TreeNode. This is not recommend if you don't have any force requirement */
   className?: string;
   style?: React.CSSProperties;
+
+  props?: any;
 }
 
 export interface EventDataNode extends DataNode {

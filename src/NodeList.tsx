@@ -170,7 +170,7 @@ const RefNodeList: React.RefForwardingComponent<NodeListRef, NodeListProps> = (p
   const listRef = React.useRef<ListRef>(null);
   const indentMeasurerRef = React.useRef<HTMLDivElement>(null);
   React.useImperativeHandle(ref, () => ({
-    scrollTo: scroll => {
+    scrollTo: (scroll) => {
       listRef.current.scrollTo(scroll);
     },
     getIndentWidth: () => indentMeasurerRef.current.offsetWidth,
@@ -302,7 +302,7 @@ const RefNodeList: React.RefForwardingComponent<NodeListRef, NodeListProps> = (p
         data={mergedData}
         itemKey={itemKey}
         height={height}
-        fullHeight={false}
+        fullHeight
         virtual={virtual}
         itemHeight={itemHeight}
         prefixCls={`${prefixCls}-list`}

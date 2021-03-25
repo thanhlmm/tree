@@ -8,6 +8,10 @@ const treeData = [
   {
     key: '0-0',
     title: 'parent 1',
+    props: {
+      'cm-template': "foo"
+    },
+    foo: 'bar',
     children: [
       { key: '0-0-0', title: 'parent 1-1', children: [{ key: '0-0-0-0', title: 'parent 1-1-0' }] },
       {
@@ -100,7 +104,7 @@ class Demo extends React.Component {
       <div style={{ margin: '0 20px' }}>
         <h2>simple</h2>
         <input aria-label="good" />
-        <Tree
+        {/* <Tree
           ref={this.setTreeRef}
           className="myCls"
           showLine
@@ -128,9 +132,9 @@ class Demo extends React.Component {
               <TreeNode title="parent 1-2-1" key="0-0-2-1" />
             </TreeNode>
           </TreeNode>
-        </Tree>
+        </Tree> */}
 
-        <h2>Check on Click TreeNode</h2>
+        {/* <h2>Check on Click TreeNode</h2>
         <Tree
           className="myCls"
           showLine
@@ -143,7 +147,7 @@ class Demo extends React.Component {
           onSelect={this.onSelect}
           onCheck={this.onCheck}
           treeData={treeData}
-        />
+        /> */}
 
         <h2>Select</h2>
         <Tree
